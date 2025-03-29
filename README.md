@@ -59,5 +59,6 @@ C++ application for managing suppliers and products (technology, tools, equipmen
 ---
 
 ### 📧 Contact  
-**Author**: Bryan Agüero Mata 
+**Author**: Bryan Agüero Mata
+
 **Email**: [Bryancr1208@gmail.com](mailto:Bryancr1208@gmail.com )  
