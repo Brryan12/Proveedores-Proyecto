@@ -1,4 +1,4 @@
-**# Supplier and Product Management System 🏭📦**  
+# Supplier and Product Management System 🏭📦  
 
 C++ application for managing suppliers and products (technology, tools, equipment), with file persistence and inventory operations.  
 
@@ -59,5 +59,5 @@ C++ application for managing suppliers and products (technology, tools, equipmen
 ---
 
 ### 📧 Contact  
-**Author**: Your Name  
+**Author**: Bryan Agüero Mata 
 **Email**: [Bryancr1208@gmail.com](mailto:Bryancr1208@gmail.com )  
