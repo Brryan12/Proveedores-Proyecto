@@ -1,0 +1,11 @@
+Tecnologia	Enrutadores 	5270	333	1
+Equipamiento	Elevador_de_cangilones	34000	555	1	Acero	356
+Herramienta	Pulidora	6200	111	1	1
+Equipamiento	Extractor_de_aire	45200	444	1	Acero	222
+Herramienta	Sierra_calar	200	111	2	1
+Equipamiento	Grua_puente	462700	111	1	Acero	234
+Tecnologia	Conmutadores 	5390	222	0
+Equipamiento	Prensa_hidraulica	56000	666	1	Acero	444
+Tecnologia	Servidores 	46270	555	1
+Herramienta	Rotomartillo	340	222	2	1
+Tecnologia	Cortafuegos	6380	111	0
