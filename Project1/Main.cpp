@@ -1,119 +1,117 @@
-#include "Producto.h"
-#include "Herramienta.h"
-#include "Equipamiento.h"
-#include "Tecnologia.h"
-#include "Proveedor.h"
-#include "Lista.h"
+#include "Product.h"
+#include "Tool.h"
+#include "Equipment.h"
+#include "Technology.h"
+#include "Supplier.h"
+#include "List.h"
 
-int main(){
-	Proveedor* prove1 = new Proveedor( "111", "Nubank", 1, 0);
-	Proveedor* prove2 = new Proveedor( "222","Maersk", 1, 0);
-	Proveedor* prove3 = new Proveedor( "333", "Home_Depot", 2, 0);
-	Proveedor* prove4 = new Proveedor( "444", "Johnson_&_Johnson", 1, 0);
-	Proveedor* prove5 = new Proveedor( "555", "The_Lego_Group", 2, 0);
-	Proveedor* prove6 = new Proveedor( "666", "Gro_Intelligence", 3, 0);
+int main() {
+    Supplier* supplier1 = new Supplier("111", "Nubank", 1, 0);
+    Supplier* supplier2 = new Supplier("222", "Maersk", 1, 0);
+    Supplier* supplier3 = new Supplier("333", "Home_Depot", 2, 0);
+    Supplier* supplier4 = new Supplier("444", "Johnson_&_Johnson", 1, 0);
+    Supplier* supplier5 = new Supplier("555", "The_Lego_Group", 2, 0);
+    Supplier* supplier6 = new Supplier("666", "Gro_Intelligence", 3, 0);
 
-	Herramienta* herra1 = new Herramienta("Pulidora",  6200, prove1, 1, 1);
-	Herramienta* herra2 = new Herramienta("Sierra_calar", 200, prove1, 2, 1);
-	Herramienta* herra3 = new Herramienta("Rotomartillo", 340, prove2, 2, 1);
-	
-	Equipamiento* equi1 = new Equipamiento("Grua_puente", 462700, prove1, 1,"Acero", 234);
-	Equipamiento * equi2 = new Equipamiento("Extractor_de_aire",45200, prove4,1, "Acero", 222);
-	Equipamiento * equi3 = new Equipamiento("Elevador_de_cangilones",34000, prove5,1, "Acero", 356);
-	Equipamiento * equi4 = new Equipamiento("Prensa_hidraulica", 56000,prove6,1,  "Acero", 444);
+    Tool* tool1 = new Tool("Polisher", 6200, supplier1, 1, 1);
+    Tool* tool2 = new Tool("Jigsaw", 200, supplier1, 2, 1);
+    Tool* tool3 = new Tool("Rotary_Hammer", 340, supplier2, 2, 1);
 
-	Tecnologia* tecno1 = new Tecnologia("Servidores ", 46270, prove5, 1);
-	Tecnologia* tecno2 = new Tecnologia("Enrutadores ", 5270, prove3, 1);
-	Tecnologia* tecno3 = new Tecnologia("Conmutadores ", 5390, prove2, 0);
-	Tecnologia* tecno4 = new Tecnologia("Cortafuegos", 6380, prove1, 0);
+    Equipment* equip1 = new Equipment("Bridge_Crane", 462700, supplier1, 1, "Steel", 234);
+    Equipment* equip2 = new Equipment("Air_Extractor", 45200, supplier4, 1, "Steel", 222);
+    Equipment* equip3 = new Equipment("Bucket_Elevator", 34000, supplier5, 1, "Steel", 356);
+    Equipment* equip4 = new Equipment("Hydraulic_Press", 56000, supplier6, 1, "Steel", 444);
 
+    Technology* tech1 = new Technology("Servers", 46270, supplier5, 1);
+    Technology* tech2 = new Technology("Routers", 5270, supplier3, 1);
+    Technology* tech3 = new Technology("Switches", 5390, supplier2, 0);
+    Technology* tech4 = new Technology("Firewalls", 6380, supplier1, 0);
 
-	cout <<endl<< "----------------Item  #1 y #2----------------------" << endl;
-	cout << "Mostrar Lista completa..." << endl << endl;
-	Lista* l1 = new Lista();
-	l1->insertarFinal(tecno2);
-	l1->insertarFinal(equi3);
-	l1->insertarFinal(herra1);
-	l1->insertarFinal(equi2);
-	l1->insertarFinal(herra2);
-	l1->insertarFinal(equi1);
-	l1->insertarFinal(tecno3);
-	l1->insertarFinal(equi4);
-	l1->insertarFinal(tecno1);
-	l1->insertarFinal(herra3);
-	l1->insertarFinal(tecno4);
-	
-	cout << l1->toString() << endl;
-	
-	cout << "<Digite Enter>" << endl;
-	cin.get();
-	system("cls");
+    cout << endl << "----------------Item #1 and #2----------------------" << endl;
+    cout << "Show complete list..." << endl << endl;
+    List* list1 = new List();
+    list1->insertEnd(tech2);
+    list1->insertEnd(equip3);
+    list1->insertEnd(tool1);
+    list1->insertEnd(equip2);
+    list1->insertEnd(tool2);
+    list1->insertEnd(equip1);
+    list1->insertEnd(tech3);
+    list1->insertEnd(equip4);
+    list1->insertEnd(tech1);
+    list1->insertEnd(tool3);
+    list1->insertEnd(tech4);
 
-	cout << endl << "----------------Item #3----------------------" << endl;
-	cout << "Mostrar solo productos especificos..." << endl << endl;
-	
-	cout << l1->toStringEspecifico ("tecnologia") << endl;
-	cout << "...................................................................." << endl;
-	cout << l1->toStringEspecifico("herramienta") << endl;
-	cout << "...................................................................." << endl;
-	cout << l1->toStringEspecifico("equipamiento") << endl;
-	
-	cout << "<Digite Enter>" << endl;
-	cin.get();
-	system("cls");
-	
-	cout << endl << "----------------Item #4----------------------" << endl;
-	cout << "Mostrar subLista segun proveedor..." << endl << endl;
-	Lista* auxLista;
+    cout << list1->toString() << endl;
 
-	auxLista=l1->retornaListaProveedor(prove1->getIDProve()); 
-	cout << auxLista->toString() << endl;
-	cout << "...................................................................." << endl;
-	auxLista = l1->retornaListaProveedor(prove2->getIDProve()); 
-	cout << auxLista->toString() << endl;
-	cout << "...................................................................." << endl;
+    cout << "<Press Enter>" << endl;
+    cin.get();
+    system("cls");
 
-	auxLista = l1->retornaListaProveedor(prove3->getIDProve()); 
-	cout << auxLista->toString() << endl;
-	cout << "...................................................................." << endl;
+    cout << endl << "----------------Item #3----------------------" << endl;
+    cout << "Show only specific products..." << endl << endl;
 
-	auxLista = l1->retornaListaProveedor(prove4->getIDProve()); 
-	cout << auxLista->toString() << endl;
-	cout << "...................................................................." << endl;
+    cout << list1->toStringSpecific("technology") << endl;
+    cout << "...................................................................." << endl;
+    cout << list1->toStringSpecific("tool") << endl;
+    cout << "...................................................................." << endl;
+    cout << list1->toStringSpecific("equipment") << endl;
 
-	auxLista = l1->retornaListaProveedor(prove5->getIDProve());
-	cout << auxLista->toString() << endl;
-	cout << "...................................................................." << endl;
+    cout << "<Press Enter>" << endl;
+    cin.get();
+    system("cls");
 
+    cout << endl << "----------------Item #4----------------------" << endl;
+    cout << "Show sublist by supplier..." << endl << endl;
+    List* auxList;
 
-	auxLista = l1->retornaListaProveedor(prove6->getIDProve());
-	cout << auxLista->toString() << endl;
-	cout << "...................................................................." << endl;
-	
-	cout  << "<Digite Enter>" << endl;
-	cin.get();
-	system("cls");
-	
-	cout << endl << "----------------Item #5----------------------" << endl;
-	cout << "Guardando Lista Actual..." << endl << endl;
-	
-	l1->guardarLista();
-	
-	cout << "<Digite Enter>" << endl;
-	cin.get();
-	system("cls");
+    auxList = list1->returnSupplierList(supplier1->getSupplierID());
+    cout << auxList->toString() << endl;
+    cout << "...................................................................." << endl;
+    auxList = list1->returnSupplierList(supplier2->getSupplierID());
+    cout << auxList->toString() << endl;
+    cout << "...................................................................." << endl;
 
-	cout << endl << "----------------Item #6----------------------" << endl;
-	cout << "Levantando archivos en Lista Nueva..." << endl << endl;
-	
-	Lista* nuevaLista = new Lista();
-	nuevaLista->cargarLista();
-	cout << nuevaLista->toString();
-	
-	cout << "<Digite Enter>" << endl;
-	cin.get();
-	system("cls");
-	
-	cin.get();
-	return 0;
+    auxList = list1->returnSupplierList(supplier3->getSupplierID());
+    cout << auxList->toString() << endl;
+    cout << "...................................................................." << endl;
+
+    auxList = list1->returnSupplierList(supplier4->getSupplierID());
+    cout << auxList->toString() << endl;
+    cout << "...................................................................." << endl;
+
+    auxList = list1->returnSupplierList(supplier5->getSupplierID());
+    cout << auxList->toString() << endl;
+    cout << "...................................................................." << endl;
+
+    auxList = list1->returnSupplierList(supplier6->getSupplierID());
+    cout << auxList->toString() << endl;
+    cout << "...................................................................." << endl;
+
+    cout << "<Press Enter>" << endl;
+    cin.get();
+    system("cls");
+
+    cout << endl << "----------------Item #5----------------------" << endl;
+    cout << "Saving current list..." << endl << endl;
+
+    list1->saveList();
+
+    cout << "<Press Enter>" << endl;
+    cin.get();
+    system("cls");
+
+    cout << endl << "----------------Item #6----------------------" << endl;
+    cout << "Loading files into new list..." << endl << endl;
+
+    List* newList = new List();
+    newList->loadList();
+    cout << newList->toString();
+
+    cout << "<Press Enter>" << endl;
+    cin.get();
+    system("cls");
+
+    cin.get();
+    return 0;
 }

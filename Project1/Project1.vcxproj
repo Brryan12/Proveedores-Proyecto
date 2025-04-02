@@ -19,23 +19,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Equipamiento.cpp" />
-    <ClCompile Include="Herramienta.cpp" />
-    <ClCompile Include="Lista.cpp" />
+    <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="Tool.cpp" />
+    <ClCompile Include="List.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Nodo.cpp" />
-    <ClCompile Include="Producto.cpp" />
-    <ClCompile Include="Proveedor.cpp" />
-    <ClCompile Include="Tecnologia.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Product.cpp" />
+    <ClCompile Include="Supplier.cpp" />
+    <ClCompile Include="Technology.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Equipamiento.h" />
-    <ClInclude Include="Herramienta.h" />
-    <ClInclude Include="Lista.h" />
-    <ClInclude Include="Nodo.h" />
-    <ClInclude Include="Producto.h" />
-    <ClInclude Include="Proveedor.h" />
-    <ClInclude Include="Tecnologia.h" />
+    <ClInclude Include="Equipment.h" />
+    <ClInclude Include="Tool.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="Supplier.h" />
+    <ClInclude Include="Technology.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Files\products.txt" />
+    <Text Include="..\Files\suppliers.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

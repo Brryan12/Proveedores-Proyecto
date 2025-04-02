@@ -13,54 +13,65 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de recursos\Files">
+      <UniqueIdentifier>{4c3cd6a9-14a3-4246-90f1-c390bdfe26b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Proveedor.cpp">
+    <ClCompile Include="Supplier.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Nodo.cpp">
+    <ClCompile Include="Node.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Producto.cpp">
+    <ClCompile Include="Product.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Lista.cpp">
+    <ClCompile Include="List.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Herramienta.cpp">
+    <ClCompile Include="Tool.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Tecnologia.cpp">
+    <ClCompile Include="Technology.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Equipamiento.cpp">
+    <ClCompile Include="Equipment.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Lista.h">
+    <ClInclude Include="List.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Nodo.h">
+    <ClInclude Include="Node.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Producto.h">
+    <ClInclude Include="Product.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Proveedor.h">
+    <ClInclude Include="Supplier.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Herramienta.h">
+    <ClInclude Include="Tool.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Tecnologia.h">
+    <ClInclude Include="Technology.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Equipamiento.h">
+    <ClInclude Include="Equipment.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Files\products.txt">
+      <Filter>Archivos de recursos\Files</Filter>
+    </Text>
+    <Text Include="..\Files\suppliers.txt">
+      <Filter>Archivos de recursos\Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
