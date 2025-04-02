@@ -26,6 +26,10 @@ C++ application for managing suppliers and products (technology, tools, equipmen
 
 ---
 
+### How to Run
+- **Run Project1.sln**
+
+---
 ### 📂 Project Structure  
 | File                  | Description                                  |  
 |-----------------------|----------------------------------------------|  
