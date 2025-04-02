@@ -1,6 +1,0 @@
-333	Home_Depot	2	0
-555	The_Lego_Group	2	0
-111	Nubank	1	0
-444	Johnson_&_Johnson	1	0
-222	Maersk	1	0
-666	Gro_Intelligence	3	0
